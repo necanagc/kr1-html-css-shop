@@ -7,6 +7,9 @@
 /* ===============================
    1. Переменные проекта
    =============================== */
+html {
+  scroll-behavior: smooth;
+}
 
 :root {
   /* Основные цвета проекта */
@@ -97,6 +100,11 @@ footer {
     text-decoration: underline;
 }
 
+:target {
+  outline: 2px dashed var(--color-primary);
+  outline-offset: 4px;
+}
+
 /*
   Hero-блок — первый крупный блок страницы.
   Он визуально отделяется от остальных разделов фоном и отступами.
@@ -123,6 +131,22 @@ footer {
 }
 
 
+
+.breadcrumbs {
+  max-width: var(--container-width);
+  margin: 0 auto var(--space-md);
+  font-size: 14px;
+  color: var(--color-muted);
+}
+
+.breadcrumbs a {
+  color: var(--color-primary);
+}
+
+.breadcrumbs span::before {
+  content: " / ";
+  color: var(--color-muted);
+}
 
 /*
   Карточка товара — самостоятельный блок.
@@ -302,3 +326,4 @@ a:focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 3px;
 }
+
