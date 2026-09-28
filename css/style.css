@@ -97,13 +97,13 @@ footer {
 }
 
 
-.site-nav list li {
+.site-nav__list li {
     padding: 0;
     margin: 16px 0 0;
     list-style: none;
 }
 
-.site-nav list a {
+.site-nav__list a {
   display: inline-block;
   padding: var(--space-sm) var(--space-md);
   color: var(--color-primary);
@@ -112,7 +112,7 @@ footer {
 }
 
 
-.site-nav list a:hover {
+.site-nav__list a:hover {
   color: var(--color-white);
   background-color: var(--color-primary);
 }
@@ -355,17 +355,12 @@ footer {
   outline-offset: 3px;
 }
 
-[aria-invalid="true"] {
-  border-color: var(--color-danger);
-}
-
-
 /*
   Подсветка ошибочных полей.
   Атрибут aria-invalid будет добавляться через JavaScript.
 */
 [aria-invalid="true"] {
-  border-color: #b00020;
+  border-color: var(--color-danger);
 }
 
 /*
