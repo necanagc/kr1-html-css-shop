@@ -12,6 +12,7 @@
 - `index.html` — главная страница;
 - `catalog.html` — каталог товаров;
 - `contacts.html` — контактная информация;
+- `orders.html` — форма заявки на покупку товара;
 - `css/style.css` — файл стилей;
 - `js/main.js` — файл JavaScript;
 - `images/` — папка для изображений;
@@ -76,7 +77,7 @@ GitHub Pages: https://necanagc.github.io/kr1-html-css-shop/
 - поля формы: имя, e-mail, телефон, дата, тема, комментарий, согласие;
 - базовая HTML-валидация;
 - базовая JS-обработка формы;
-- сообщение об успешной отправке.
+- сообщение о демо-отправке без сохранения данных.
 
 ## CSS-архитектура
 
@@ -117,5 +118,6 @@ GitHub Pages: https://necanagc.github.io/kr1-html-css-shop/
 - `catalog-filters` — фильтры каталога;
 - `order-dialog` — модальное окно заявки;
 - `order-form` — форма заявки;
+- `order-page` — страница оформления заявки;
 - `button` — кнопка;
 - `site-footer` — подвал сайта.
