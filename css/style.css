@@ -13,17 +13,19 @@ html {
 
 :root {
   /* Основные цвета проекта */
-  --color-bg: #ffffff;
-  --color-text: #222222;
-  --color-muted: #666666;
-  --color-primary: #0057b8;
-  --color-primary-dark: #003f86;
-  --color-border: #dddddd;
-  --color-surface: #f7f7f7;
-  --color-surface-accent: #eef5ff;
-  --color-danger: #b00020;
-  --color-success: #168a2f;
-  --color-success-bg: #eefaf0;
+  --color-bg: #f7f5f7;
+  --color-text: #2d2730;
+  --color-muted: #655e68;
+  --color-primary: #402e47;
+  --color-primary-dark: #2d2032;
+  --color-accent: #736e1e;
+  --color-accent-dark: #5a5617;
+  --color-border: #c4bdc7;
+  --color-surface: #eeeaef;
+  --color-surface-accent: #e6e0e8;
+  --color-danger: #9b293b;
+  --color-success: #3d7048;
+  --color-success-bg: #edf4ee;
   --color-white: #ffffff;
 
   /* Отступы */
@@ -131,6 +133,10 @@ footer {
   outline-offset: 4px;
 }
 
+.site-header:target {
+  outline: none;
+}
+
 /*
   Hero-блок — первый крупный блок страницы.
   Он визуально отделяется от остальных разделов фоном и отступами.
@@ -154,6 +160,10 @@ footer {
 
 .section h2 {
   margin-top: 0;
+}
+
+.order-page__form {
+  max-width: 560px;
 }
 
 
@@ -194,7 +204,7 @@ footer {
 }
 
 .product-card--featured {
-  border-color: var(--color-primary);
+  border-color: var(--color-accent);
 }
 
 .product-card--discount {
@@ -223,6 +233,16 @@ footer {
 .product-card__button {
   margin-top: auto;
   align-self: flex-start;
+}
+
+.product-card__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  padding: var(--space-sm);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
 }
 
 .products-grid {
@@ -257,6 +277,8 @@ footer {
 .button {
   display: inline-block;
   padding: var(--space-sm) var(--space-md);
+  color: var(--color-white);
+  background-color: var(--color-primary);
   border: none;
   border-radius: var(--radius-sm);
   font: inherit;
@@ -264,13 +286,17 @@ footer {
   cursor: pointer;
 }
 
+.button:hover {
+  background-color: var(--color-primary-dark);
+}
+
 .button--primary {
   color: var(--color-white);
-  background-color: var(--color-primary);
+  background-color: var(--color-accent);
 }
 
 .button--primary:hover {
-  background-color: var(--color-primary-dark);
+  background-color: var(--color-accent-dark);
 }
 
 .button--secondary {
@@ -285,7 +311,7 @@ footer {
 }
 
 .button:focus-visible {
-  outline: 2px solid var(--color-primary);
+  outline: 2px solid var(--color-accent);
   outline-offset: 3px;
 }
 
@@ -347,9 +373,11 @@ footer {
 
 .order-dialog {
   width: min(100% - 32px, 560px);
+  max-height: calc(100vh - 32px);
   padding: var(--space-lg);
   border: none;
   border-radius: var(--radius-lg);
+  overflow-y: auto;
 }
 
 .order-dialog::backdrop {
@@ -367,6 +395,24 @@ footer {
 .order-form__label {
   display: block;
   margin-bottom: var(--space-xs);
+}
+
+.order-form__label--checkbox {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-right: auto;
+}
+
+.order-form__checkbox {
+  margin: 0;
+  accent-color: var(--color-accent);
+}
+
+.order-form__hint {
+  display: block;
+  margin-top: var(--space-xs);
+  color: var(--color-muted);
 }
 
 .order-form__input,
@@ -394,6 +440,8 @@ footer {
 
 .order-form__actions {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   gap: var(--space-md);
   margin-top: var(--space-lg);
 }
@@ -445,3 +493,37 @@ a:focus-visible {
   outline-offset: 3px;
 }
 
+.scroll-top {
+  position: fixed;
+  right: var(--space-lg);
+  bottom: var(--space-lg);
+  z-index: 5;
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  box-shadow: 0 3px 12px rgb(45 32 50 / 24%);
+  font-size: 26px;
+  line-height: 1;
+  text-decoration: none;
+  transition: transform 160ms ease, background-color 160ms ease;
+}
+
+.scroll-top:hover {
+  color: var(--color-white);
+  background-color: var(--color-accent);
+  transform: translateY(-3px);
+}
+
+.scroll-top:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.header--img__logo {
+  width: 50px;
+  height: 50px;
+}

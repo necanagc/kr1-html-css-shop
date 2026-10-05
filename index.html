@@ -3,22 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Стартовая страница учебного интернет-магазина.">
-  <title>Учебный интернет-магазин</title>
+  <meta name="description" content="Музыкальные инструменты и оборудование в Жуковском.">
+  <title>МузТорг Жуковский</title>
 
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Учебный интернет-магазин">
-  <meta property="og:description" content="Учебный frontend-проект интернет-магазина.">
+  <meta property="og:title" content="МузТорг Жуковский">
+  <meta property="og:description" content="Музыкальные инструменты и оборудование в Жуковском.">
   <meta property="og:image" content="https://necanagc.github.io/kr1-html-css-shop/images/preview.png">
 
 </head>
 
 <body>
-    <header class="site-header">
+    <header class="site-header" id="top">
       <div class="site-header__inner">
-        <a class="site-header__logo" href="index.html">ShopProject</a>
+        <img class="header--img__logo" src="images/image.png">
+        <a class="site-header__logo" href="index.html">МузТорг Жуковский</a>
 
         <nav class="site-nav" aria-label="Основная навигация">
           <ul class="site-nav__list">
@@ -34,6 +35,9 @@
               <a class="site-nav__link" href="contacts.html">Контакты</a>
             </li>
             <li class="site-nav__item">
+              <a class="site-nav__link" href="orders.html">Заявки</a>
+            </li>
+            <li class="site-nav__item">
               <a class="site-nav__link" href="index.html#popular">
                 Популярные товары
               </a>
@@ -46,23 +50,22 @@
 
     <main>
         <section class="hero">
-            <h1>Учебный интернет-магазин</h1>
+            <h1>Музыкальный магазин «МузТорг» в Жуковском</h1>
             <p>
-                Это стартовая страница учебного frontend-проекта.
-                В дальнейшем на её основе будет разработан многостраничный сайт 
-                интернет-магазина или каталога услуг.
+              Музыкальные инструменты и оборудование для занятий, репетиций и выступлений.
+              Выберите товар и оставьте заявку онлайн.
             </p>
-            <a class="button" href="#popular">Перейти к товарам</a>
+            <a class="button" href="#popular">Смотреть товары</a>
         </section>
 
         <section class="section" id="advantages">
-            <h2>Преимущества проекта</h2>
+            <h2>Почему выбирают нас</h2>
 
             <ul class="advantages-list">
-                <li>понятная HTML-структура;</li>
-                <li>семантические блоки страницы;</li>
-                <li>подключение внешнего CSS-файла;</li>
-                <li>подготовка к разработке многостраничного сайта.</li>
+                <li>инструменты и оборудование для разных задач;</li>
+                <li>удобное оформление заявки онлайн;</li>
+                <li>помощь с выбором товара;</li>
+                <li>магазин в Жуковском.</li>
             </ul>
         </section>
 
@@ -71,13 +74,14 @@
 
           <div class="products-grid">
             <article class="product-card product-card--featured">
-              <h3 class="product-card__title">Товар 1</h3>
-              <p class="product-card__description">Краткое описание учебного товара.</p>
-              <p class="product-card__price">Цена: 1000 руб.</p>
+              <img class="product-card__image" src="https://bxuiiaeu1l.a.trbcdn.net/2rd/7xa/upl/rac/w0w/c48/kwk/gg4/s/2rd7xauplracw0wc48kwkgg4s.jpg" alt="Музыкальный инструмент из каталога" loading="lazy" decoding="async">
+              <h3 class="product-card__title">Микшер Behringer</h3>
+              <p class="product-card__description">Организация сигналов, для концертов и репетиций</p>
+              <p class="product-card__price">Цена: 10 000 руб.</p>
               <button
                 class="button product-card__button"
                 type="button"
-                data-product="Товар 1"
+                data-product="Микшер Behringer"
               >
                 Заказать
               </button>
@@ -85,26 +89,28 @@
 
 
             <article class="product-card product-card--featured">
-              <h3 class="product-card__title">Товар 2</h3>
-              <p class="product-card__description">Краткое описание учебного товара.</p>
-              <p class="product-card__price">Цена: 1500 руб.</p>
+              <img class="product-card__image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiuOlkQvFRg10ZYWpsodNN0Nqq104lc87C_4ubjngDNvwfJYEVbi7QLcMj&s=10" alt="Музыкальный инструмент из каталога" loading="lazy" decoding="async">
+              <h3 class="product-card__title">Микрофон Shure</h3>
+              <p class="product-card__description">Легендарный динамический микрофон, для записи и выступлений</p>
+              <p class="product-card__price">Цена: 12 000 руб.</p>
               <button
                 class="button product-card__button"
                 type="button"
-                data-product="Товар 2"
+                data-product="Микрофон Shure"
               >
                 Заказать
               </button>
             </article>
 
             <article class="product-card product-card--featured">
-              <h3 class="product-card__title">Товар 3</h3>
-              <p class="product-card__description">Краткое описание учебного товара.</p>
-              <p class="product-card__price">Цена: 2000 руб.</p>
+              <img class="product-card__image" src="https://bxuiiaeu1l.a.trbcdn.net/cjc/tnt/tdg/bw4/8ss/w08/ow8/sg8/cjctnttdgbw48ssw08ow8sg80.jpg" alt="Музыкальный инструмент из каталога" loading="lazy" decoding="async">
+              <h3 class="product-card__title">DJ-контроллер</h3>
+              <p class="product-card__description">Для вечеринок и ваших DJ-сетов</p>
+              <p class="product-card__price">Цена: 50 000 руб.</p>
               <button
                 class="button product-card__button"
                 type="button"
-                data-product="Товар 3"
+                data-product="DJ-контроллер"
               >
                 Заказать
               </button>
@@ -114,24 +120,25 @@
 
 
         <aside class="aside-info">
-            <h2>Информация для студентов</h2>
+            <h2>Нужна помощь с выбором?</h2>
             <p>
-                На следующих практических занятиях этот проект будет расширяться:
-                появятся формы, модальное окно, дополнительные страницы, Flex/Grid,
-                БЭМ-структура и адаптивная версия сайта
+              Оставьте заявку, и мы свяжемся с вами, чтобы уточнить детали заказа.
             </p>
+            <a class="button" href="orders.html">Оставить заявку</a>
         </aside>
     </main>
 
     <footer class="site-footer">
-        <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+        <p>&copy; 2026 МузТорг Жуковский. Все права защищены.</p>
         <p>Дисциплина: Фронтенд и бэкенд разработка</p>
     </footer>
 
 <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
-  <h2 id="order-dialog-title">Оформление заявки</h2>
+  <h2 class="order-dialog__title" id="order-dialog-title">Оформление заявки</h2>
 
   <form class="order-form" id="order-form" action="#" method="post" novalidate>
+    <input id="selected-product" name="selected-product" type="hidden">
+
     <div class="order-form__field">
       <label class="order-form__label" for="order-name">Имя</label>
       <input
@@ -139,6 +146,9 @@
         id="order-name"
         name="name"
         type="text"
+        placeholder="Введите ваше имя"
+        minlength="2"
+        autocomplete="given-name"
         required
       >
     </div>
@@ -150,11 +160,65 @@
         id="order-email"
         name="email"
         type="email"
+        placeholder="example@mail.ru"
+        autocomplete="email"
         required
       >
     </div>
 
+    <div class="order-form__field">
+      <label class="order-form__label" for="order-phone">Телефон</label>
+      <input
+        class="order-form__input"
+        id="order-phone"
+        name="phone"
+        type="tel"
+        inputmode="tel"
+        placeholder="+7 (900) 000-00-00"
+        pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
+        autocomplete="tel"
+        required
+      >
+      <small class="order-form__hint">Формат: +7 (900) 000-00-00</small>
+    </div>
+
+    <div class="order-form__field">
+      <label class="order-form__label" for="order-date">Дата связи</label>
+      <input class="order-form__input" id="order-date" name="date" type="date">
+    </div>
+
+    <div class="order-form__field">
+      <label class="order-form__label" for="order-topic">Тема заявки</label>
+      <select class="order-form__select" id="order-topic" name="topic" required>
+        <option value="">Выберите тему</option>
+        <option value="product">Заказ товара</option>
+        <option value="consultation">Консультация</option>
+        <option value="delivery">Доставка</option>
+      </select>
+    </div>
+
+    <div class="order-form__field">
+      <label class="order-form__label" for="order-comment">Комментарий</label>
+      <textarea
+        class="order-form__textarea"
+        id="order-comment"
+        name="comment"
+        rows="4"
+        placeholder="Укажите дополнительную информацию"
+      ></textarea>
+    </div>
+
     <div class="order-form__actions">
+      <label class="order-form__label order-form__label--checkbox" for="order-agreement">
+        <input
+          class="order-form__checkbox"
+          id="order-agreement"
+          name="agreement"
+          type="checkbox"
+          required
+        >
+        Я согласен на обработку данных
+      </label>
       <button class="button button--secondary" type="button" id="close-order-dialog">
         Закрыть
       </button>
@@ -169,6 +233,8 @@
 <p class="success-message" id="success-message" hidden>
   Форма успешно отправлена!
 </p>
+
+<a class="scroll-top" href="#top" aria-label="Наверх" title="Наверх">↑</a>
 
 </body>
 </html>
